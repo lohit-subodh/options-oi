@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from 'next/link';
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -38,7 +38,13 @@ export default function Home() {
           priority
         />
       </div>
-
+      <div className="home-container">
+      <h1>Welcome to My Next.js App</h1>
+      <p>Click the button below to view the Open Interest page.</p>
+      <Link href="/open-interest">
+        <button className="openinterest-button">Go to Open Interest</button>
+      </Link>
+    </div>
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

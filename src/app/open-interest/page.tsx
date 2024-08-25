@@ -160,9 +160,9 @@ function OpenInterest() {
   };
 
   const plotConfig = {
-    displayModeBar: true, // Set to false to hide the modebar entirely
+    displayModeBar: false, // Set to false to hide the modebar entirely
     displaylogo: false, // Hide the Plotly logo on the modebar
-    modeBarButtonsToRemove: [
+    /*modeBarButtonsToRemove: [
       'zoom2d',      // Remove zoom tool
       'pan2d',       // Remove pan tool
       'select2d',    // Remove box select tool
@@ -173,7 +173,7 @@ function OpenInterest() {
       'lasso2d',   // Remove lasso select tool
       'toImage',      // Remove download plot as PNG tool
   
-    ],
+    ],*/
     responsive: true
   };
 

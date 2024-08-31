@@ -34,3 +34,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# additional files and directories to ignore
+/trace
+/app-build-manifest.json
+/build-manifest.json
+/react-loadable-manifest.json
+/cache/
+/server/
+/static/
+
+# python virtual environment
+.venv/

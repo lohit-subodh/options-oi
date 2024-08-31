@@ -4,11 +4,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Plot from 'react-plotly.js';
 import Head from 'next/head';
+import Link from 'next/link'; // Add this line
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Layout } from 'plotly.js';
 import styles from './OpenInterest.module.css';
+import RootLayout from '../layout';
 
 interface OpenInterestData {
   strike_prices: number[];
@@ -141,6 +143,7 @@ function OpenInterest() {
   };
 
   return (
+    <RootLayout>
     <>
       <Head>
         <title>Options Open Interest Data</title>
@@ -254,6 +257,7 @@ function OpenInterest() {
         </div>
       </div>
     </>
+    </RootLayout>
   );
 }
 

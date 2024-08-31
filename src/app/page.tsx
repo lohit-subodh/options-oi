@@ -1,9 +1,16 @@
 import Image from "next/image";
 import Link from 'next/link';
 import LandingPage from "./landing/page";
+import Head from 'next/head'; // Add this line to import the Head component
 export default function Home() {
   return (
-     <LandingPage />);
+      <>
+          <Head>
+              <title>Options Open Interest Data</title>
+          </Head>
+          <LandingPage />
+      </>
+  );
     {/*
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">

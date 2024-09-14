@@ -34,3 +34,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Install frontend dependencies:
+`npm install`
+
+## Install backend dependencies:
+`pip install -r requirements.txt`
+
+## Running the Application
+1. ### Start the backend server:
+    `python main.py`
+This will start the FastAPI backend on http://localhost:8000.
+
+2. ## Start the frontend server:
+    `npm run dev`
+This will start the Next.js frontend on http://localhost:3000.
+
+Accessing the Application
+Frontend: Open http://localhost:3000 in your browser.
+Backend: The backend API will be available at http://localhost:8000.
+
+

@@ -102,11 +102,13 @@ function OpenInterest() {
       tickvals: data?.strike_prices.filter(price => price % 100 === 0),
       gridcolor: 'rgba(0,0,0,0.1)',
       linecolor: 'rgba(0,0,0,0.2)',
+      showgrid: false,
     },
     yaxis: {
-      title: { text: 'Open Interest (in thousands)' },
+      title: { text: 'Open Interest ' },
       gridcolor: 'rgba(0,0,0,0.1)',
       linecolor: 'rgba(0,0,0,0.2)',
+      showgrid: false,
     },
     barmode: 'group',
     autosize: true,
@@ -143,22 +145,18 @@ function OpenInterest() {
   };
 
   return (
-    <RootLayout>
-    <>
+    <RootLayout>    
       <Head>
         <title>Options Open Interest Data</title>
       </Head>
       <div className={styles.container}>
-        <header className={styles.header}>
-          <nav className={styles.nav}>
-            <div className={styles.logo}>
-              <Link href="/">
-                <img src="/marketViz_logo.png" alt="Logo" className={styles.logoImage} />
-                MarketViz
-              </Link>
-            </div>
-          </nav>
-        </header>
+      <header className="bg-white shadow-md">
+        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
+          <Link href="/"  className="text-2xl font-bold text-blue-600">
+          MarketViz
+          </Link>
+        </nav>
+      </header>
         <h1 className={styles.pageTitle}>Open Interest Analysis</h1>
         <div className={`${styles.marketStatus} ${isMarketOpen ? styles.open : styles.closed}`}>
           <span className={styles.statusIcon}></span>
@@ -256,7 +254,7 @@ function OpenInterest() {
             )}
         </div>
       </div>
-    </>
+    
     </RootLayout>
   );
 }

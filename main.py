@@ -61,10 +61,10 @@ def process_option_chain_data(symbol, selected_expiry_date=None):
     for index, row in oi_data.iterrows():
         if lower_bound <= row['Strike Price'] <= upper_bound and row['Strike Price'] % 100 == 0:
             strike_prices.append(row['Strike Price'])
-            ce_open_interests.append((row['CALLS_OI'] * lot_size) / 1e3)  # CALLS_OI for Call Open Interest
-            pe_open_interests.append((row['PUTS_OI'] * lot_size) / 1e3)   # PUTS_OI for Put Open Interest
-            ce_open_interests_change.append((row['CALLS_Chng in OI'] * lot_size) / 1e3)  # CALLS_CHANGE_OI for Call Open Interest
-            pe_open_interests_change.append((row['PUTS_Chng in OI'] * lot_size) / 1e3)   # PUTS_CHANGE_OI for Put Open Interest
+            ce_open_interests.append((row['CALLS_OI'] ) )  # CALLS_OI for Call Open Interest
+            pe_open_interests.append((row['PUTS_OI'] ) )   # PUTS_OI for Put Open Interest
+            ce_open_interests_change.append((row['CALLS_Chng in OI'] ) )  # CALLS_CHANGE_OI for Call Open Interest
+            pe_open_interests_change.append((row['PUTS_Chng in OI'] ))   # PUTS_CHANGE_OI for Put Open Interest
 
     closest_strike = find_closest_strike(strike_prices, underlying_value)
     return {

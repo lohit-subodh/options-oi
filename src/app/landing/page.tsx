@@ -7,10 +7,11 @@ import RootLayout from '../layout';
 const LandingPage: React.FC = () => {
   return (
     <RootLayout>
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    
       <Head>
         <title>MarketViz - Option Analysis Tool</title>
       </Head>
+      <div className="min-h-screen flex flex-col bg-gray-50">
       <header className="bg-white shadow-md">
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold text-blue-600">MarketViz</div>
